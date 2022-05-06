@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.listen(port);
+app.listen(process.env.PORT || port);
 
 const file = fs.existsSync("./data.json")?fs.readFileSync("./data.json"):"";
 const data = file?JSON.parse(file):{};
