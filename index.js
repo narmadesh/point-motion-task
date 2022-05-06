@@ -6,7 +6,7 @@ const ReverseMd5 = require('reverse-md5');
 const jwt = require("jsonwebtoken");
 const { use } = require('express/lib/application');
 const app = express()
-const port = 7000
+const port = 5000
 const rev = ReverseMd5({
     lettersUpper: false,
     lettersLower: true,
