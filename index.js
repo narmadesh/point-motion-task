@@ -82,7 +82,7 @@ app.post('/signup', (req, res) => {
                 password: md5(password),
             };
             fs.writeFileSync('./data.json',JSON.stringify(data))
-            res.status(201).json({ result: true, message: "SignUp success. Please proceed to Signin" });
+            res.status(200).json({ result: true, message: "SignUp success. Please proceed to Signin" });
         }
     }
 })
