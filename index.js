@@ -137,7 +137,8 @@ app.get('/user/me',(req,res)=>{
             if (err) {
                 res.status(401).json({ result: false, error: "JWT Verification Failed" });
             }
-            res.status(200).json({ result: true, data: data["shivam"] })
+            
+            res.status(200).json({ result: true, data: data[key] })
         });
     } else {
         res.status(401).json({ result: false, error: "Please provide a JWT token" });
